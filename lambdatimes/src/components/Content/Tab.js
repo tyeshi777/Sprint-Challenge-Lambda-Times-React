@@ -7,7 +7,7 @@ const Tab = props => {
       if it is not it should just be 'tab'*/
   return (
     <div
-      className={`tab${props.tab.selectedTab ? " active-tab" : ""}`}
+      className={props.tab === props.selectedTab ? "tab active-tab" : "tab"}
       onClick={() => {
         props.selectTabHandler(props.tab);
         /* Replace this dummy click handler function with your selectTabHandler function from props 
@@ -22,6 +22,8 @@ const Tab = props => {
 // Make sure you include PropTypes on your props.
 
 Tab.propTypes = {
-  tab: PropTypes.string
+  selectedTab: PropTypes.string,
+  tab: PropTypes.string,
+  selectTabHandler: PropTypes.func
 };
 export default Tab;
