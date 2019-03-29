@@ -7,6 +7,7 @@ const TopBarDiv = styled.div`
   color: white;
   background: lightGreen;
   width: 100%;
+  position: fixed;
   &:hover {
     background: white;
     color: black;
